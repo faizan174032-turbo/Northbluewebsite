@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /privacy-policy/
+
+Sitemap: https://northbluedigital.com.au/sitemap.xml
