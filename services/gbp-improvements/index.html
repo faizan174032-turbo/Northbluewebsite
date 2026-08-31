@@ -264,6 +264,56 @@
   </div>
 </footer>
 
+<div class="floating-actions">
+  <a href="tel:+61494719462" class="fab fab-call" aria-label="Call NorthBlue Digital">
+    <span class="fab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+    <span class="fab-label">Call 0494 719 462</span>
+  </a>
+  <button type="button" class="fab fab-inquiry" data-open-inquiry aria-label="Send an enquiry">
+    <span class="fab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+    <span class="fab-label">Send Enquiry</span>
+  </button>
+</div>
+
+<div class="inquiry-modal" aria-hidden="true">
+  <div class="inquiry-modal-backdrop" data-close-inquiry></div>
+  <div class="inquiry-modal-panel" role="dialog" aria-modal="true" aria-label="Send an enquiry">
+    <button type="button" class="inquiry-modal-close" data-close-inquiry aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <h3>Send an Enquiry</h3>
+    <p>Reply within 1 business day — no runaround, no hard sell.</p>
+    <form data-validate novalidate>
+      <div class="field">
+        <label for="fab-name">Name</label>
+        <input type="text" id="fab-name" name="name" required placeholder="Your full name" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="fab-phone">Phone</label>
+        <input type="tel" id="fab-phone" name="phone" required placeholder="04xx xxx xxx" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="fab-email">Email</label>
+        <input type="email" id="fab-email" name="email" required placeholder="you@business.com.au" autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="fab-message">Message</label>
+        <textarea id="fab-message" name="message" required placeholder="Tell us a bit about what's going on and what you'd like help with."></textarea>
+      </div>
+      <div class="form-honeypot">
+        <label>Leave this field blank
+          <input type="text" name="company" tabindex="-1" autocomplete="off">
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">
+        Send Enquiry
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+      <div class="form-status" role="status"></div>
+    </form>
+  </div>
+</div>
+
 <button class="to-top" aria-label="Back to top">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>

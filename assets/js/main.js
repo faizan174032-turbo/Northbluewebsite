@@ -179,6 +179,31 @@
     });
   }
 
+  /* Inquiry modal */
+  var inquiryModal = document.querySelector('.inquiry-modal');
+  if (inquiryModal) {
+    var openInquiryEls = document.querySelectorAll('[data-open-inquiry]');
+    var closeInquiryEls = inquiryModal.querySelectorAll('[data-close-inquiry]');
+    function openInquiry(e) {
+      if (e) e.preventDefault();
+      inquiryModal.classList.add('is-open');
+      inquiryModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      var firstField = inquiryModal.querySelector('input,textarea');
+      if (firstField) firstField.focus({ preventScroll: true });
+    }
+    function closeInquiry() {
+      inquiryModal.classList.remove('is-open');
+      inquiryModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    openInquiryEls.forEach(function (el) { el.addEventListener('click', openInquiry); });
+    closeInquiryEls.forEach(function (el) { el.addEventListener('click', closeInquiry); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeInquiry();
+    });
+  }
+
   /* Back to top */
   var toTopBtn = document.querySelector('.to-top');
   if (toTopBtn) {
